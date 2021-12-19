@@ -1,0 +1,58 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+{% extends "base.html" %}
+
+{% block content%}
+
+<span id="details">
+    <i><p class="mui--text-display1" style="text-align: center;">
+        {{ dets.title }}
+    </p></i>
+    <div class="mui-container mui--text-subhead" id="deets">
+        <!-- Book Details go Here -->
+        <div id="facts">
+            <p>By {{ dets.author }}</p>
+            <p>{{ dets.page_count }} Pages</p>
+            <p>This edition published in {{ dets.pub_year }}</p>
+        </div>
+        <div id="desc">
+            <p>{{ dets.description }}</p>
+        </div>
+    </div>
+    
+    <div class="mui-divider divider"></div>
+</span>
+
+<form action="/details" method="POST" class="mui-form">
+    <div class="mui-container">
+        <div class="mui-select">
+            <label for="sel_book">
+                Select Book
+            </label>
+            <select id="sel_book" name="sel_book" required>
+            </select>
+        </div>
+
+        <input 
+            class="mui-btn mui-btn--raised mui-btn--primary" id="getbook"
+            type="submit" name="Get Book" value="Get Book Details"
+        >
+    </div>
+</form>
+
+<!-- Project Scripts -->
+<script src="static/js/details.js" crossorigin="anonymous" ></script>
+
+<script>
+    var book_info = {{ dets|tojson }};
+
+    let details = document.querySelector("#details");
+    if (book_info == '') {
+        details.setAttribute("style", "display: none;");
+        console.log(details);
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+{% extends "base.html" %}
+
+{% block alert %}
+
+{% if alert != "" %}
+<p class="mui--text-display1 mui--text-accent">{{alert}}</p>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<form action="/add_book" method="POST" class="mui-form">
+    <div class="mui-container">
+        <div class="mui-textfield">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" value="" required>
+        </div>
+
+        <div class="mui-textfield">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" value="" required>
+        </div>
+
+        <div class="mui-select">
+            <label for="category">Book Category</label>
+            <select id="category" name="category" required>
+                {% for c in categories %}
+                <option value="{{c}}">{{c}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mui-textfield">
+            <label for="isbn">ISBN</label>
+            <input type="number" id="isbn" name="isbn" value="">
+        </div>
+
+        <!-- <div>
+            <label for="read">Users</label>
+            <input type="checkbox" id="read" name="read" value="">
+        </div> -->
+
+        <input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" name="Add Book" value="Add Item">
+    </div>
+</form>
+
+{% endblock %}

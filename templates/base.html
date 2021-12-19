@@ -1,0 +1,46 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="static/styles/style.css">
+
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon"/>
+
+    <!-- load MUI resources -->
+    <link href="//cdn.muicss.com/mui-0.10.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.2/js/mui.min.js"></script>
+
+    <title>Book Club</title>
+</head>
+
+<body>
+    <div class="mui-container main">
+        <h1 class="mui--text-display2" style="text-align: center">
+            Book Club
+        </h1>
+        {% block alert %} {% endblock %}
+        {% block content %} {% endblock %}
+    </div>
+    <div class="mui-container footer">
+        <p class="mui--text-title">
+            Logged in as {{session["username"]}}
+        </p>
+
+        <div>
+            <a href="/logout" class="mui-btn mui-btn--danger mui-btn--raised">
+                Logout
+            </a>
+            <a href="/" class="mui-btn mui-btn--raised mui-btn--accent">
+                Home
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

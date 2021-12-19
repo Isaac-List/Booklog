@@ -1,0 +1,42 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+body {
+    margin: 0;
+    background-color: #dddddd !important;
+}
+
+.main {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+    margin: 24px;
+    background-color: #efefff;
+}
+
+.divider {
+    margin: 36px 0;
+}
+
+#deets {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.25);
+    background: #333333;
+    color: white;
+    display: flex;
+    flex-flow: row wrap !important;
+}
+
+#facts {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+#desc {
+    display: flex;
+    flex-grow: 2;
+    flex-basis: 50%;
+    padding: 24px;
+}

@@ -1,0 +1,30 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mui-container">
+    <p class="mui--text-display1">
+        Welcome, {{ session["username"] }}
+    </p>
+</div>
+
+<div class="mui-container">
+    <a href="/list" class="mui-btn mui-btn--primary mui-btn--raised">
+        Show Books Read
+    </a>
+    <a href="/details" class="mui-btn mui-btn--primary mui-btn--raised">
+        Show Details of Book
+    </a>
+    <a href="/add_book" class="mui-btn mui-btn--primary mui-btn--raised">
+        Add Books to the Reading List
+    </a>
+    <a href="/add_user" class="mui-btn mui-btn--primary mui-btn--raised">
+        Add Users to the Book Club
+    </a>
+</div>
+
+{% endblock %}

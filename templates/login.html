@@ -1,0 +1,37 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="static/styles/style.css">
+
+    <!-- load MUI resources -->
+    <link href="//cdn.muicss.com/mui-0.10.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.2/js/mui.min.js"></script>
+
+    <title>Book Club</title>
+</head>
+
+<body>
+    <div class='mui-container main'>
+        <h1 class='mui--text-dark mui--text-headline'>
+            Login
+        </h1>
+        <div class="mui-divider" style='margin: 16px 0'></div>
+        <form class='mui-form' method="post">
+            <div class='mui-textfield'>
+                <label style='font-size: 20px;' for='username'>
+                    Enter a Username
+                </label>
+                <input id='username' type=text name=username>
+            </div>
+            <input class='mui-btn mui-btn--raised mui-btn--primary' type=submit value=Login>
+        </form>
+    </div>
+</body>
+</html>
