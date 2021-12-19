@@ -3,7 +3,7 @@ A book-journal type of project, developed as a
 [Luther College](https://luther.edu) CS-330 Final Project.
 
 ## Project Overview
-[More info to come later :D]
+![Screenshot of the application home page](/resources/home.png)
 
 ## Getting Started
 
